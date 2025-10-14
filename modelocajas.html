@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de cajas</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /*
+            el ancho total de un elemento q le dais con width comprende contenido,
+                padding-left, padding-right, border-left y el border-right.
+            el alto total de un elemtno que le dais con height comprende,
+                padding-top, padding-bottom, border-top, border-bottom.
+            */
+            box-sizing: border-box;
+        }
+        /* padding abreviada -> padding: 20px 30px 40px 5px;
+            padding 20px 30px 40px;
+            padding 20px 30px;
+            padding 30px;
+
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 40px;
+            padding-letf: 5px
+
+        */
+
+        /*
+            border: 1px-solid blue;
+            border-style:solid; obligatoria
+            border-color:blue; no obligatoria
+            border-width: 1px; no obligatoria
+
+            border-top
+            border-bottom
+            border-left
+            border-right
+        */
+
+        /*
+            margin: (4 valores, 3, 2, o 1)
+            margin-top
+            margin-bottom
+            margin-left
+            margin-right
+        */
+
+            .container{
+                width:600px;
+                height: 300px;
+                padding: 10px;
+                border:1px solid blue;
+                margin: 10px;
+                background-color: aqua;
+
+            }
+            /* % Es una medida relativa en relación al padre*/
+            .container2{
+                width: 60%;
+                height : 300px;
+                background-color: rebeccapurple;
+            }
+            /* Max Width */
+            .container3{
+                max-width: 600px;
+                min-width: 500px;
+                height: 300px;
+                background-color: red;
+            }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="container2"></div>
+    <div class="container3"></div>
+    
+</body>
+</html>

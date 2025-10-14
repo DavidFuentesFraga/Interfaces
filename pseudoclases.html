@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            color:black;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        a:hover{
+            color:gold;
+            text-decoration: 3px dotted gold;
+            font-size: 25px;
+        }
+        a:visited{
+            font-style: italic;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing: 10px;
+        }
+        a:active{
+            font-weight:bold;
+            color: darkred;
+        }
+        h1:hover{
+            text-decoration: underline dashed pink;
+            color: pink;
+        }
+        li:first-child{
+            color:aqua;
+        }
+        li:first-of-type{
+            color:aqua;
+        }
+        li:nth-child(2){
+            color: red;
+        }
+        input#fnombre:focus{
+            outline: none;
+            border: 2px solid red;
+            background-color: aqua; 
+        }
+        input#fnombre + input:checked{
+            accent-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- PSEUDOCLASES: para dar estilos a los distintos estados de un elemento html 
+     sintaxis: 
+        elemento: nombrepseudoclase{
+            estilos css
+        }
+
+
+    Los enlaces: estado normal (link), estado visitado (visited), estado activo (active), pasar el raton (hover)
+    Orden Correcto:
+        a:link{
+
+        }
+        a:hover{
+
+        }
+        a:visited{
+
+        }
+        a:active{
+
+        }        
+    PSEUDOCLASES CON LISTAS
+        first-child
+        first-of-type
+        last-child
+        last-of-type
+        only-child
+        nth-child(nº de hijo, pares, impares)
+
+    -->
+    <h1> test </h1>    
+    <a href="https://www.google.com">Ir a Google</a>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <form action="pagina.php" method="get">
+        <label for="fnombre">Nombre:</label>
+        <input type="text" size="30" id="fnombre" name="fnombre" maxlength="20" placeholder="Tu nombre">
+        <input type="radio" name="fradio" value="valor1">
+        <input type="radio" name="fradio" value="valor2">
+    </form>
+</body>
+</html>

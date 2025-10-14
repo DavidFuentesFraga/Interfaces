@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       div p{
+        color: red; /* 3,4,5,6,7 */
+       } 
+       div > p{
+        color: yellow; /* 3,4,5,6,7 */
+       }
+       div + p{
+        color: green; /* 7,8 */
+       }
+       div ~ p{
+        color: blue; /* 7,8,9 */
+       }
+       div div > p{
+        color:hotpink; /* 5,6 */
+       }
+       div > div + p{
+        color:gray; /* 7 */ 
+       }
+    </style>
+</head>
+<body>
+    <!-- 
+        Selectores:
+            Universal *
+            Etiqueta p, h1, h2
+            de clases .nombreClase
+            de identificadores #nombreidentificados
+            encadenado h1, h2
+        
+        Combinadores: algo que combina dos o más selectores
+            de descendientes  (espacio) : selecciona hijos, nietos, etc.. De un elemento específico 
+            de hijo directo/secundario > : selecciona hijos directos de un elemento específico
+            del hermano siguiente  +   : seleccionar el primer hermano siguiente a un elemento
+            de los hermanos adyacentes/siguientes ~ : seleccionar todos los hermanos siguientes a un elemento
+    -->
+<p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <div>
+        <p>Párrafo 3</p>
+        <p>Párrafo 4</p>
+        <div>
+            <p>Párrafo 5</p>
+            <p>Párrafo 6</p>
+        </div>
+        <p>Párrafo 7</p>
+    </div>
+    <p>Párrafo 8</p>
+    <p>Párrafo 9</p>
+</body>
+</html>
