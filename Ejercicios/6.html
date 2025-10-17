@@ -1,0 +1,63 @@
+    <!--
+        Busca un par de Pseudoclases y Pseudoelementos adicionales a las indicadas en el tema,
+        muestra su función y utilízalas en algún ejemplo.
+
+            Pseudoclases:
+                :target -> Selecciona un elemento cuyo id coincide con el fragmento de URL actual 
+                .checked -> Selecciona casillas, radios o checkboxes marcados
+            Pseudoelementos:
+                ::marker -> Estiliza el símbolo o número de una lista
+                ::file-selector-button -> Permite cambiar el estilo del botón de subida de archivos
+
+    -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  #caja:target {
+    background: yellow;
+  }
+
+  input:checked + label {
+    color: green;
+    font-weight: bold;
+  }
+
+  li::marker {
+    color: red;
+  }
+
+  input[type="file"]::file-selector-button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 5px;
+  }
+</style>
+</head>
+<body>
+    <h2>:target</h2>
+    <a href="#caja">Resaltar caja</a>
+    <div id="caja">Soy la caja del :target</div>
+
+    <h2>:checked</h2>
+    <input type="checkbox" id="check1">
+    <label for="check1">Marcarme</label>
+
+    <h2>::marker</h2>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+    </ul>
+
+    <h2>::file-selector-button</h2>
+    <input type="file">
+
+</body>
+</html>
