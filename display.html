@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .p1, .p2, .p3{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        img{
+            display:block;
+        }
+        label, input{
+            display:block;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+        button:hover + .oculto{
+            color: red;
+            display:none;
+            display:block;
+        }
+        .oculto{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        dos grupos de elementos:
+        Elementos en bloque: ocupaba el 100% del ancho, empieza y acaba en nueva línea
+            p, h1.. h6, div, ul, ol, li, table, tr, td ....
+
+        Elementos en línea: ocupan el propio contenido, no se les puede dar tamaño (width, height)
+            no contenían elementos (excepto enlaces)
+            img, a, span, label, input ...
+
+        display: no cambia el tipo de elemento pero si la visualización
+            inline
+            block
+            inline-block: actúa como elemento en línea y como elemento en bloque
+                porque los elementos están uno al lado del otro en línea
+                porque le podemos dar tamaño a esos elementos
+            
+            none: oculta el elemento sin dejar su hueco
+            flex
+            grid
+            
+    -->
+    <button>Pasa el ratón</button>
+    <p class="oculto">Hola</p>
+
+
+
+    <p class="p1">Hola</p>
+    <p class="p2">Adiós</p>
+    <p class="p3">Hola otra vez</p>
+    <img src="fondo.jpg" alt="fondo" width="200" height="200">
+    <img src="fondo.jpg" alt="fondo" width="200" height="200">
+    <img src="fondo.jpg" alt="fondo" width="200" height="200">
+    <form action="pagina.php" method="">
+        <label for="fnombre">Nombre</label>
+        <input type="text" size="50" placeholder="Tu nombre">
+    </form>
+</body>
+</html>
