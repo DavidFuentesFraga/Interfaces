@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Desplegable</title>
+<style>
+  *{box-sizing:border-box}
+  ul{
+    list-style:none;
+    width:200px;
+    margin:0;
+    padding:0;
+    background:gainsboro;
+    text-align:center;
+    border:1px solid gray;
+    box-shadow:11px 0 15px 1px rgba(0,0,0,0.34);
+  }
+  li{
+    border-bottom:1px solid gray;
+    position:relative;
+  }
+  li:last-child{border-bottom:none}
+  li>a{
+    display:block;
+    padding:20px 26px;
+    text-decoration:none;
+    color:initial;
+  }
+  li>a:hover{color:white;background:gray}
+  .activo{color:white;background:green}
+
+  .oculto{
+    display:none;
+    position:absolute;
+    top:0;
+    left:200px;
+    width:200px;
+    background:gainsboro;
+    border:1px solid gray;
+    box-shadow:5px 0 10px rgba(0,0,0,0.2);
+  }
+  li:hover > .oculto{display:block}
+</style>
+</head>
+<body>
+  <ul>
+    <li><a href="inicio.html" class="activo">Inicio</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li>
+      <a href="#">Productos</a>
+      <ul class="oculto">
+        <li>Pantalones</li>
+        <li>Accesorios</li>
+        <li>Faldas</li>
+        <li>Zapatos</li>
+        <li>Tops</li>
+      </ul>
+    </li>
+    <li><a href="#">Contacta</a></li>
+    <li><a href="#">Nosotros</a></li>
+  </ul>
+</body>
+</html>

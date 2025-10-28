@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .c1{
+            background-color: rgb(0,0,0,1);
+        }
+        .c2{
+            background-color: rgb(0,0,0,0.7);
+        }
+        .c3{
+            background-color: rgb(0,0,0,0.4);
+        }
+        .c4{
+            background-color: rgb(0,0,0,0.2);
+        }
+        .c1, .c2, .c3, .c4{
+            float: left;
+            /* 
+            float: right;
+            float: none;
+            */
+        }
+        p{
+            clear: left;
+        }
+        .clearfix::after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+        ul{
+            list-style-type: none;
+            margin:0px;
+            padding:0px;
+        }
+        ul li{
+            float:left;
+
+        }
+        ul .derecha{ /* se puede tmb con last-child o nth-child */
+            float:right;
+        }
+        ul li a{
+            text-decoration: none;
+            color: initial;
+        }
+    </style>
+</head>
+<body>
+    <!--float: permite flotar  elementos poner uno al lado del otro
+        float:none;
+        float:left;
+        float:right;
+
+        clear: limpia el flotamiento, hay que aplicarlo al elemento que viene después de los elementos flotados
+        clear: left;
+        clear: right;
+        clear both;
+    -->
+    <p><img src="user.svg" alt="usuario" width="50" height="auto">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, recusandae ratione molestias laudantium minus tempore eum! Quo tempora quibusdam, atque nisi perspiciatis deserunt rerum fugiat alias illo neque quas deleniti?
+    </p>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+    <div class="clearfix"></div>
+    <p>Hola</p>
+
+    <ul>
+        <li><a href="#">Enlace 1</a></li>
+        <li><a href="#">Enlace 2</a></li>
+        <li><a href="#">Enlace 3</a></li>
+        <li class="derecha"><a href="#">Enlace 4</a></li>      
+    </ul>
+</body>
+</html>

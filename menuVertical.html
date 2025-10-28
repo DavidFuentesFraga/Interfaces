@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+
+        }
+        ul{
+            list-style-type: none;
+            width: 200px;
+            margin: 0px;
+            padding: 0px;
+            background-color: gainsboro;
+            text-align: center;
+            border:1px solid gray;
+            box-shadow: 11px 0px 15px 1px rgba(0,0,0,0.34);
+        }
+        li{
+            border-bottom: 1px solid gray;
+        }
+        li:last-child{
+            border-bottom: none;
+        }
+        li > a{
+            text-decoration: none;
+            color: initial;
+            display: block;
+            padding: 20px 26px;
+        }
+        li > a:hover{
+            color: white;
+            background-color: gray;
+        }
+        li:nth-child(1){
+            font-weight: bold;
+        }
+        li > a.activo{
+            color:white;
+            background-color: green;
+        }
+        /* pseudoclase: not */
+        li > a:hover:not(.activo){
+            background-color: gray;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li> <a href="inicio.html" class="activo">Inicio</a></li>
+        <li> <a href="noticias.html">Noticias</a></li>
+        <li> <a href="#">Productos</a></li>
+        <li> <a href="#">Contacta</a></li>
+        <li> <a href="#">Nosotros</a></li>
+    </ul>
+</body>
+</html>
