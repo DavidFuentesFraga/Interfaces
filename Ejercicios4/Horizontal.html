@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con listas</title>
+    <style>
+        body {
+            background-color: #30334a;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul.menu {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        ul.menu li {
+            display: inline-block;
+            margin: 0 40px;
+            background-color: #321e6a;
+            border-radius: 10px;
+            padding: 20px 26px;
+            font-weight: bold;
+            vertical-align: middle;
+            transition: background-color 0.3s;
+        }
+
+        ul.menu li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul.menu li:hover {
+            background-color: #6f449b;
+        }
+
+        ul.menu img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">WIKI</a></li>
+        <a href="inicio.html"><img src="logo.png" alt="Logo"></a>
+        <li><a href="#">TIENDA</a></li>
+    </ul>
+</body>
+</html>
